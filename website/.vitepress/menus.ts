@@ -47,9 +47,9 @@ const hooks = [
 ];
 
 export const sidebar: UserConfig['themeConfig']['sidebar'] = {
-  '/guide/': guide,
-  '/hooks/': hooks,
-  '/': guide,
+  // '/guide/': guide,
+  // '/hooks/': hooks,
+  '/': [...guide, ...hooks],
 };
 
 export const nav: UserConfig['themeConfig']['nav'] = [
@@ -57,6 +57,6 @@ export const nav: UserConfig['themeConfig']['nav'] = [
   {
     text: '组合式API',
     link: hooks[0].children[0].link,
-    activeMatch: '/hooks/',
+    activeMatch: '^/hooks',
   },
 ];
