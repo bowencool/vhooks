@@ -1,7 +1,7 @@
 <script lang="ts">
   import { TimeoutError } from 'high-order-async-utilities';
   import { defineComponent } from 'vue';
-  import { useAsyncState } from 'vhooks';
+  import { useAsyncState } from '@npm_bowen/vhooks';
 
   function queryService(keywords = '') {
     console.log('fetching', keywords);

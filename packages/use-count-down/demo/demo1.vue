@@ -1,7 +1,7 @@
 <script lang="tsx">
   import { defineComponent } from 'vue';
   import dayjs from 'dayjs';
-  import { useCountDown } from 'vhooks';
+  import { useCountDown } from '@npm_bowen/vhooks';
 
   export default defineComponent({
     setup() {

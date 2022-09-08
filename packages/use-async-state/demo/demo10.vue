@@ -2,7 +2,7 @@
   import { AbortError } from 'high-order-async-utilities';
   import { defineComponent } from 'vue';
   import { VideoPause, VideoPlay } from '@element-plus/icons-vue';
-  import { useAsyncState } from 'vhooks';
+  import { useAsyncState } from '@npm_bowen/vhooks';
 
   let count = 0;
   const queryService: () => Promise<{ count: number }> = () =>

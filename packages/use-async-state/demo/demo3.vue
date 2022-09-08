@@ -3,7 +3,7 @@
   import { defineComponent } from 'vue';
   import { ElIcon, ElButton } from 'element-plus';
   import { VideoPause, VideoPlay } from '@element-plus/icons-vue';
-  import { useAsyncState } from 'vhooks';
+  import { useAsyncState } from '@npm_bowen/vhooks';
   import { error2String } from './error2String';
 
   let count = 0;

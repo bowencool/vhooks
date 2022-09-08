@@ -1,9 +1,9 @@
-# vhooks
+# @npm_bowen/vhooks
 
 vue hooks
 
 # usage
 
 ```bash
-npm i vhooks
+npm i @npm_bowen/vhooks
 ```

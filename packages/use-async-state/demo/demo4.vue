@@ -2,7 +2,7 @@
   import type { VNodeChild } from 'vue';
   import { defineComponent } from 'vue';
   import { ElIcon } from 'element-plus';
-  import { useAsyncState } from 'vhooks';
+  import { useAsyncState } from '@npm_bowen/vhooks';
 
   const queryService: () => Promise<number> = () =>
     new Promise((resolve) => {

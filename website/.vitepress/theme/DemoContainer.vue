@@ -1,6 +1,6 @@
 <script lang="ts">
   import { computed, defineComponent, onMounted, PropType, ref } from 'vue';
-  import { useCopy } from 'vhooks';
+  import { useCopy } from '@npm_bowen/vhooks';
 
   type FileDTO = {
     filePath: string;

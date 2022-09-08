@@ -1,6 +1,6 @@
 <script lang="ts">
   import { defineComponent } from 'vue';
-  import { useAsyncState } from 'vhooks';
+  import { useAsyncState } from '@npm_bowen/vhooks';
 
   let count = 0;
   const queryService: () => Promise<{ count: number }> = () =>

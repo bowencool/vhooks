@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "name": "vhooks",
+  "name": "@npm_bowen/vhooks",
   "description": "vue hooks",
   "main": "cjs/index.js",
   "module": "es/index.js",
