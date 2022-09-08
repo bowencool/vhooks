@@ -12,23 +12,23 @@
 
 <demo src="./demo/demo2.vue" title="手动执行 + 错误提示" />
 
-<demo src="./demo/demo3.vue" title="轮询" />
+<demo src="./demo/demo3.vue" file="./demo/error2String.ts" title="轮询" />
 
-<demo src="./demo/demo11.vue" title="屏幕聚焦重新请求" />
+<demo src="./demo/demo11.vue" file="./demo/error2String.ts" title="屏幕聚焦重新请求" />
 
 <demo src="./demo/demo9.vue" title="超时" />
 
 <demo src="./demo/demo10.vue" title="手动停止" />
 
-<demo src="./demo/demo8.vue" title="自动重试" />
+<demo src="./demo/demo8.vue" file="./demo/error2String.ts" title="自动重试" />
 
 <demo src="./demo/demo4.vue" title="防止 loading 闪烁" />
 
-<demo src="./demo/demo5.vue" title="防抖" />
+<demo src="./demo/demo5.vue" file="./demo/error2String.ts" title="防抖" />
 
-<demo src="./demo/demo6.vue" title="对结果防抖" />
+<demo src="./demo/demo6.vue" file="./demo/error2String.ts" title="对结果防抖" />
 
-<demo src="./demo/demo7.vue" title="节流" />
+<demo src="./demo/demo7.vue" file="./demo/error2String.ts" title="节流" />
 
 ## Api
 

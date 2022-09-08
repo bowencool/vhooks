@@ -1,6 +1,7 @@
 <script lang="tsx">
   import { computed, defineComponent, ref } from 'vue';
   import { useCopy } from 'vhooks';
+  import { ElButton, ElTooltip, ElInput } from 'element-plus';
 
   export default defineComponent({
     setup() {
@@ -22,17 +23,17 @@
 
       return () => (
         <>
-          <el-input ref={inputRef} v-model={message.value}>
+          <ElInput ref={inputRef} v-model={message.value}>
             {{
               append: () => (
-                <el-tooltip effect="dark" content={tooltip.value} placement="top">
-                  <el-button onClick={copy} type="primary">
+                <ElTooltip effect="dark" content={tooltip.value} placement="top">
+                  <ElButton onClick={() => copy()} type="primary">
                     复制
-                  </el-button>
-                </el-tooltip>
+                  </ElButton>
+                </ElTooltip>
               ),
             }}
-          </el-input>
+          </ElInput>
         </>
       );
     },

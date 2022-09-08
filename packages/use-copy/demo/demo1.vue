@@ -1,6 +1,7 @@
 <script lang="tsx">
   import { computed, defineComponent } from 'vue';
   import { useCopy } from 'vhooks';
+  import { ElButton, ElTooltip } from 'element-plus';
 
   export default defineComponent({
     setup() {
@@ -18,9 +19,9 @@
         return '点击复制';
       });
       return () => (
-        <el-tooltip effect="dark" content={tooltip.value} placement="top">
-          <el-button onClick={copy}>复制</el-button>
-        </el-tooltip>
+        <ElTooltip effect="dark" content={tooltip.value} placement="top">
+          <ElButton onClick={() => copy()}>复制</ElButton>
+        </ElTooltip>
       );
     },
   });
