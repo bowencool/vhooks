@@ -14,6 +14,7 @@
     "baseUrl": ".",
     "paths": {
       "packages/*": ["packages/*"],
+      "vhooks": ["packages/index.ts"],
       "@/*": ["website/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable"]

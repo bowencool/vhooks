@@ -2,16 +2,18 @@ import type { MaybeRef } from '@vueuse/shared';
 import { useTimeoutFn } from '@vueuse/shared';
 import { ref, unref } from 'vue';
 import type { CopyOptions } from 'copy-rich-text';
-import { copy } from 'copy-rich-text';
+import copy from 'copy-rich-text';
 
+// #region base
 type copyBaseProps = CopyOptions & {
   text: MaybeRef<string | HTMLElement>; // 拷贝到剪切板里的文本或 HTML 元素
   duration?: number; // 拷贝完成后的延迟时间
   onSuccess?: () => void; // 拷贝成功的回调函数
   onError?: (error: unknown) => void; // 拷贝失败的回调函数
 };
+// #endregion base
 
-export default function useCopy({ text, duration = 1000, onSuccess, onError, ...copyOptions }: copyBaseProps) {
+export function useCopy({ text, duration = 1000, onSuccess, onError, ...copyOptions }: copyBaseProps) {
   const copied = ref(false);
   const error = ref();
   const timeout = useTimeoutFn(() => {
