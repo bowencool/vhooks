@@ -2,7 +2,7 @@
   import { ElButton, ElIcon } from 'element-plus';
   import type { VNodeChild } from 'vue';
   import { ref, defineComponent } from 'vue';
-  import { useAsyncState } from '@npm_bowen/vhooks';
+  import { useAsyncState } from '@bowencool/vhooks';
   import { error2String } from './error2String';
 
   function getUnstableApi(keywords: string) {

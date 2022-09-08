@@ -2,7 +2,7 @@
   import type { VNodeChild } from 'vue';
   import { defineComponent } from 'vue';
   import { ElIcon } from 'element-plus';
-  import { useAsyncState } from '@npm_bowen/vhooks';
+  import { useAsyncState } from '@bowencool/vhooks';
   import { error2String } from './error2String';
 
   function service(keywords: string) {

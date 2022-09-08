@@ -14,7 +14,7 @@
     "baseUrl": ".",
     "paths": {
       "packages/*": ["packages/*"],
-      "@npm_bowen/vhooks": ["packages/index.ts"],
+      "@bowencool/vhooks": ["packages/index.ts"],
       "@/*": ["website/*"]
     },
     "lib": ["esnext", "dom", "dom.iterable"]

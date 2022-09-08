@@ -1,6 +1,6 @@
 <script lang="tsx">
   import { computed, defineComponent, ref } from 'vue';
-  import { useCopy } from '@npm_bowen/vhooks';
+  import { useCopy } from '@bowencool/vhooks';
   import { ElButton, ElTooltip, ElInput } from 'element-plus';
 
   export default defineComponent({
