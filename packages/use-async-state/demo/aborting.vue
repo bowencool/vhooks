@@ -39,8 +39,8 @@
   <el-button :disabled="!loading" type="danger" plain :icon="VideoPause" @click="cancel">立即停止</el-button>
   <pre>count:
     <span v-if="error">{{ error }}</span>
-    <span v-else-if="data">{{ data.count }}</span>
     <el-icon v-else-if="loading"><icon-loading /></el-icon>
+    <span v-else-if="data">{{ data.count }}</span>
     <span v-else>empty</span>
 </pre>
   <blockquote>

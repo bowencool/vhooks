@@ -52,14 +52,14 @@
         let content: VNodeChild;
         if (error.value) {
           content = <span>{error2String(error.value)}</span>;
-        } else if (data.value) {
-          content = JSON.stringify(data.value);
         } else if (loading.value) {
           content = (
             <ElIcon>
               <icon-loading />
             </ElIcon>
           );
+        } else if (data.value) {
+          content = JSON.stringify(data.value);
         } else {
           content = 'empty';
         }

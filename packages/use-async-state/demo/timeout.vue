@@ -44,8 +44,8 @@
   </el-button>
   <pre>data:
     <span v-if="error">{{ error }}</span>
-    <span v-else-if="data">{{ data }}</span>
     <el-icon v-else-if="loading"><icon-loading /></el-icon>
+    <span v-else-if="data">{{ data }}</span>
     <span v-else>empty</span>
 </pre>
 </template>

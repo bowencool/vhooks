@@ -30,6 +30,12 @@
         let content: VNodeChild;
         if (error.value) {
           content = <span>{error2String(error.value)}</span>;
+        } else if (loading.value) {
+          content = (
+            <ElIcon>
+              <icon-loading />
+            </ElIcon>
+          );
         } else if (data.value) {
           content = (
             <ul>
@@ -37,12 +43,6 @@
                 <li key={s}>{s}</li>
               ))}
             </ul>
-          );
-        } else if (loading.value) {
-          content = (
-            <ElIcon>
-              <icon-loading />
-            </ElIcon>
           );
         } else {
           content = <span>empty</span>;
