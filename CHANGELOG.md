@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/bowencool/vhooks/compare/v0.2.0...v0.3.0) (2022-09-10)
+
+
+### Features
+
+* usePaging and useInfiniteScroll ([7a9994b](https://github.com/bowencool/vhooks/commit/7a9994b7ed42d42e7641cfd2f85c99eeea2f4457))
+
+
+
 # [0.2.0](https://github.com/bowencool/vhooks/compare/v0.1.2...v0.2.0) (2022-09-10)
 
 
