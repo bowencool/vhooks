@@ -70,7 +70,6 @@
     "chalk": "^4.1.2",
     "check-versions-in-packagejson": "^1.2.5",
     "conventional-changelog-cli": "^2.1.1",
-    "copy-rich-text": "^0.2.0",
     "core-js": "^3.20.0",
     "dayjs": "^1.10.7",
     "element-plus": "^2.1.4",
@@ -109,6 +108,7 @@
   },
   "dependencies": {
     "@bowencool/async-utilities": "^2.5.4",
+    "copy-rich-text": "^0.2.0",
     "utility-types": "^3.10.0"
   },
   "peerDependencies": {},
