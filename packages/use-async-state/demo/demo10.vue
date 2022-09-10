@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { AbortError } from 'high-order-async-utilities';
+  import { AbortError } from '@bowencool/async-utilities';
   import { defineComponent } from 'vue';
   import { VideoPause, VideoPlay } from '@element-plus/icons-vue';
   import { useAsyncState } from '@bowencool/vhooks';

@@ -6,7 +6,7 @@ import {
   debounceAsyncResult,
   throttleAsyncResult,
   withRetryAsync,
-} from 'high-order-async-utilities';
+} from '@bowencool/async-utilities';
 import { useIntervalFn, useEventListener, useDebounce, useThrottleFn } from '@vueuse/core';
 
 export type UseAsyncStateOptions<R, P extends any[]> = {

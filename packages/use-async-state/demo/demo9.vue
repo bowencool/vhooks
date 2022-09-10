@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { TimeoutError } from 'high-order-async-utilities';
+  import { TimeoutError } from '@bowencool/async-utilities';
   import { defineComponent } from 'vue';
   import { useAsyncState } from '@bowencool/vhooks';
 
