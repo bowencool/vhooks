@@ -11,115 +11,120 @@ import { useIntervalFn, useEventListener, useDebounce, useThrottleFn } from '@vu
 
 export type UseAsyncStateOptions<R, P extends any[]> = {
   /**
-   * @description 默认 false。 即在初始化时自动执行 service；如果设置为 true，则需要手动调用 run 触发执行。
+   * @description Default false. i.e. service is executed automatically at initialization; if set to true, run needs to be called manually to trigger execution.
+   * @description.cn 默认 false。 即在初始化时自动执行 service；如果设置为 true，则需要手动调用 run 触发执行。
    */
   manual?: boolean;
   /**
-   * @description 默认参数，数组形式
+   * @description The default parameters which should be an array
+   * @description.cn 默认参数，数组形式
    */
   defaultParams?: P;
   /**
-   * @description 成功时回调
+   * @description Callback when success
+   * @description.cn 成功时回调
    */
   onSuccess?: (arg0: R, arg1: P) => void;
   /**
-   * @description 失败时回调
+   * @description Callback when failed
+   * @description.cn 失败时回调
    */
   onError?: (arg0: any, arg1: P) => void;
   /**
-   * @description 完成时回调
+   * @description Callback when completed
+   * @description.cn 完成时回调
    */
   onComplete?: (arg0: P) => void;
   /**
-   * @description 轮询间隔，单位为毫秒。设置后，将进入轮询模式，定时触发 run
+   * @description.cn 轮询间隔，单位为毫秒。设置后，将进入轮询模式，定时触发 run
    */
   pollingInterval?: number;
   /**
-   * @description 在页面隐藏时，是否继续轮询。默认为 true，即不会停止轮询；如果设置为 false , 在页面隐藏时会暂时停止轮询，页面重新显示时继续上次轮询
+   * @description.cn 在页面隐藏时，是否继续轮询。默认为 true，即不会停止轮询；如果设置为 false , 在页面隐藏时会暂时停止轮询，页面重新显示时继续上次轮询
    */
   pollingWhenHidden?: boolean;
   /**
-   * @description 在屏幕重新获取焦点或重新显示时，是否重新发起请求。默认为 false，即不会重新发起请求；如果设置为 true，在屏幕重新聚焦或重新显示时，会重新发起请求。
+   * @description.cn 在屏幕重新获取焦点或重新显示时，是否重新发起请求。默认为 false，即不会重新发起请求；如果设置为 true，在屏幕重新聚焦或重新显示时，会重新发起请求。
    */
   refreshOnWindowFocus?: boolean;
   /**
-   * @description 屏幕重新聚焦，如果每次都重新发起请求，不是很好，我们需要有一个时间间隔，在当前时间间隔内，不会重新发起请求
+   * @description.cn 屏幕重新聚焦，如果每次都重新发起请求，不是很好，我们需要有一个时间间隔，在当前时间间隔内，不会重新发起请求
    * 需要配和 refreshOnWindowFocus 使用。默认5000
    */
   focusTimespan?: number;
   /**
-   * @description 可以延迟 loading 变成 true 的时间，有效防止闪烁
+   * @description.cn 可以延迟 loading 变成 true 的时间，有效防止闪烁
    */
   loadingDelay?: number;
   /**
-   * @description 防抖间隔, 单位为毫秒，设置后，请求进入防抖模式。
+   * @description.cn 防抖间隔, 单位为毫秒，设置后，请求进入防抖模式。
    */
   debounceInterval?: number;
   /**
-   * @description （执行频率过高时或执行时间不均匀）取最后一次执行的异步任务结果。默认 false, 推荐开启
+   * @description.cn （执行频率过高时或执行时间不均匀）取最后一次执行的异步任务结果。默认 false, 推荐开启
    * 详情： https://bowencool.github.io/async-utilities/functions/debounceAsyncResult/readme.html
    */
   debounceResult?: boolean;
   /**
-   * @description 取第一次执行的异步任务结果并忽略在此期间的任何执行。默认 false, 跟 debounceResult、debounceInterval 互斥。
+   * @description.cn 取第一次执行的异步任务结果并忽略在此期间的任何执行。默认 false, 跟 debounceResult、debounceInterval 互斥。
    * 详情： https://bowencool.github.io/async-utilities/functions/throttleAsyncResult/readme.html
    */
   throttleResult?: boolean | Parameters<typeof throttleAsyncResult>[1];
   /**
-   * @description 自动重试，
+   * @description.cn 自动重试，
    * 详情： https://bowencool.github.io/async-utilities/functions/withRetryAsync/readme.html
    */
   autoRetry?: Parameters<typeof withRetryAsync>[1];
   /**
-   * @description 超时自动失败，error 会是一个 TimeoutError
+   * @description.cn 超时自动失败，error 会是一个 TimeoutError
    */
   timeout?: number /* | Parameters<typeof abortableAsync>[1] */;
 };
 export type UseAsyncStateReturnType<R, P extends any[]> = {
   /**
-   * @description 任务结果
+   * @description.cn 任务结果
    */
   data: Ref<R | undefined> /* | DeepReadonly<Ref<R | undefined>> */;
   /**
-   * @description 当前调用的参数列表。比如：展示“未搜索到 {params} 相关数据”
+   * @description.cn 当前调用的参数列表。比如：展示“未搜索到 {params} 相关数据”
    */
   params: Ref<P | undefined> /* | DeepReadonly<Ref<R | undefined>> */;
   /**
-   * @description 给页面渲染的 loading，根据 loadingDelay 优化
+   * @description.cn 给页面渲染的 loading，根据 loadingDelay 优化
    */
   loading: DeepReadonly<Ref<boolean>>;
   /**
-   * @description 任务执行中抛出的错误
+   * @description.cn 任务执行中抛出的错误
    */
   error: DeepReadonly<Ref<unknown | undefined>>;
   /**
-   * @description 手动触发 service 执行，参数会传递给 service；
+   * @description.cn 手动触发 service 执行，参数会传递给 service；
    */
   run: (...p: P) => Promise<R>;
   /**
-   * @description 取消当前任务，需要运行环境支持 AbortController，error 会是一个 AbortError 。如果有定时器，也会暂定。
+   * @description.cn 取消当前任务，需要运行环境支持 AbortController，error 会是一个 AbortError 。如果有定时器，也会暂定。
    */
   cancel?: () => void;
   /**
-   * @description 暂停定时器
+   * @description.cn 暂停定时器
    */
   pause?: () => void;
   /**
-   * @description 恢复定时器（并立即执行一次）
+   * @description.cn 恢复定时器（并立即执行一次）
    */
   resume?: () => void;
   /**
-   * @description 任务是否正在执行，不受 loadingDelay 影响
+   * @description.cn 任务是否正在执行，不受 loadingDelay 影响
    */
   pending: DeepReadonly<Ref<boolean>>;
 };
 
 /**
- * @description 管理异步状态，通常用于网络请求。
+ * @description.cn 管理异步状态，通常用于网络请求。
  */
 export function useAsyncState<R, P extends any[]>(
   /**
-   * @description 异步任务
+   * @description.cn 异步任务
    */
   service: (...p: P) => Promise<R>,
   options: UseAsyncStateOptions<R, P> = {},

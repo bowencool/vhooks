@@ -2,33 +2,39 @@
 
 管理异步状态，通常用于网络请求。
 
-> 模仿 [ahooks/useRequest](https://ahooks.js.org/zh-CN/hooks/async/#userequest) 的低配版。
+Manages asynchronous state, typically for network requests.
 
-为什么不直接返回一个响应式对象？[因为响应式对象不能用解构语法](https://v3.cn.vuejs.org/guide/reactivity-fundamentals.html#%E5%93%8D%E5%BA%94%E5%BC%8F%E7%8A%B6%E6%80%81%E8%A7%A3%E6%9E%84)。
+> Vue 版 [ahooks/useRequest](https://ahooks.js.org/zh-CN/hooks/use-request/index)，高级功能有所出入。
+>
+> [ahooks/useRequest](https://ahooks.js.org/zh-CN/hooks/use-request/index) for Vue, there are some different in advanced features.
+
+为什么不直接返回一个响应式对象？[因为响应式对象不能用解构语法](https://cn.vuejs.org/guide/extras/reactivity-transform.html#refs-vs-reactive-variables)。
+
+Why not just return a reactive object? [Because reactive objects cannot use deconstructive syntax](https://vuejs.org/guide/extras/reactivity-transform.html#refs-vs-reactive-variables).
 
 ## Demos
 
-<demo src="./demo/demo1.vue" />
+<demo src="./demo/basic.vue" title="基本使用 Basic Usage" />
 
-<demo src="./demo/demo2.vue" title="手动执行 + 错误提示" />
+<demo src="./demo/manual.vue" title="手动调用和可选的错误视图 Invoke manually and optional error view" />
 
-<demo src="./demo/demo3.vue" file="./demo/error2String.ts" title="轮询" />
+<demo src="./demo/polling.vue" file="./demo/error2String.ts" title="轮询 Polling" />
 
-<demo src="./demo/demo11.vue" file="./demo/error2String.ts" title="屏幕聚焦重新请求" />
+<demo src="./demo/refreshOnWindowFocus.vue" file="./demo/error2String.ts" title="屏幕聚焦重新请求 Refresh on window focus" />
 
-<demo src="./demo/demo9.vue" title="超时" />
+<demo src="./demo/timeout.vue" title="超时 Timeout" />
 
-<demo src="./demo/demo10.vue" title="手动停止" />
+<demo src="./demo/aborting.vue" title="手动停止 Aborting" />
 
-<demo src="./demo/demo8.vue" file="./demo/error2String.ts" title="自动重试" />
+<demo src="./demo/retry.vue" file="./demo/error2String.ts" title="自动重试 Auto retry" />
 
-<demo src="./demo/demo4.vue" title="防止 loading 闪烁" />
+<demo src="./demo/loadingDelay.vue" title="防止 loading 闪烁 Prevent loading flicker" />
 
-<demo src="./demo/demo5.vue" file="./demo/error2String.ts" title="防抖" />
+<demo src="./demo/debounce.vue" file="./demo/error2String.ts" title="防抖 Debounce" />
 
-<demo src="./demo/demo6.vue" file="./demo/error2String.ts" title="对结果防抖" />
+<demo src="./demo/debounceResult.vue" file="./demo/error2String.ts" title="对结果防抖 Debounce Result" />
 
-<demo src="./demo/demo7.vue" file="./demo/error2String.ts" title="节流" />
+<demo src="./demo/throttle.vue" file="./demo/error2String.ts" title="节流 Throttle" />
 
 ## Api
 

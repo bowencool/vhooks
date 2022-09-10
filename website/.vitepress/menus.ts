@@ -22,12 +22,12 @@ fs.readdirSync(`${INPUT_PATH}/components`)
 
 const guide = [
   {
-    text: '介绍',
+    text: 'Guide',
     children: [
-      { text: 'vhooks 是什么？', link: '/guide/intro' },
+      { text: "What's vhooks?", link: '/guide/intro' },
       // { text: '开始使用', link: '/guide/getting-started' },
       // { text: '配置', link: '/guide/configuration' },
-      { text: '贡献指南', link: '/guide/contribution' },
+      { text: 'Contribution', link: '/guide/contribution' },
       // { text: 'Todos', link: '/guide/todos' },
     ],
   },
@@ -35,7 +35,7 @@ const guide = [
 
 const hooks = [
   {
-    text: '组合式API',
+    text: 'Composition API',
     children: [
       { text: 'useAsyncState 异步状态管理', link: '/hooks/use-async-state/readme' },
       // { text: 'usePaging 分页器状态管理', link: '/hooks/use-paging/readme' },

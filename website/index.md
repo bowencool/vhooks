@@ -4,7 +4,7 @@ vue hooks.
 
 see [Website](https://github.com/bowencool/vhooks)
 
-## usage
+## Usage
 
 ```bash
 npm i @bowencool/vhooks
