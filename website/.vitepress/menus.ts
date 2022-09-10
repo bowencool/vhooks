@@ -53,10 +53,14 @@ export const sidebar: UserConfig['themeConfig']['sidebar'] = {
 };
 
 export const nav: UserConfig['themeConfig']['nav'] = [
-  { text: '指南', link: '/guide/intro', activeMatch: '^/$|^/guide/' },
+  // { text: '指南', link: '/guide/intro', activeMatch: '^/$|^/guide/' },
+  // {
+  //   text: '组合式API',
+  //   link: hooks[0].children[0].link,
+  //   activeMatch: '^/hooks',
+  // },
   {
-    text: '组合式API',
-    link: hooks[0].children[0].link,
-    activeMatch: '^/hooks',
+    text: 'Github',
+    link: 'https://github.com/bowencool/vhooks',
   },
 ];
