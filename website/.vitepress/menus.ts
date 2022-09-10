@@ -63,4 +63,8 @@ export const nav: UserConfig['themeConfig']['nav'] = [
     text: 'Github',
     link: 'https://github.com/bowencool/vhooks',
   },
+  {
+    text: 'ChangeLog',
+    link: '/changelog',
+  },
 ];
