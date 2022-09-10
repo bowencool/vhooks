@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/bowencool/vhooks/compare/v0.1.2...v0.2.0) (2022-09-10)
+
+
+### Features
+
+* update async-utilities ([8f1faa1](https://github.com/bowencool/vhooks/commit/8f1faa1f084c0474e670643ac2b8eb3e17384747))
+
+
+
 ## [0.1.2](https://github.com/bowencool/vhooks/compare/v0.1.1...v0.1.2) (2022-09-10)
 
 
