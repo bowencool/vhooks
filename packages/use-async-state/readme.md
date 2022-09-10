@@ -4,9 +4,9 @@
 
 Manages asynchronous state, typically for network requests.
 
-> Vue 版 [ahooks/useRequest](https://ahooks.js.org/zh-CN/hooks/use-request/index)，高级功能有所出入。
+> Vue 版 [ahooks/useRequest](https://ahooks.js.org/zh-CN/hooks/use-request/index)，高级功能根据 [@bowencool/async-utilities](https://bowencool.github.io/async-utilities/) 实现。
 >
-> [ahooks/useRequest](https://ahooks.js.org/zh-CN/hooks/use-request/index) for Vue, there are some different in advanced features.
+> [ahooks/useRequest](https://ahooks.js.org/zh-CN/hooks/use-request/index) for Vue, advanced features are implemented according to [@bowencool/async-utilities](https://bowencool.github.io/async-utilities/).
 
 为什么不直接返回一个响应式对象？[因为响应式对象不能用解构语法](https://cn.vuejs.org/guide/extras/reactivity-transform.html#refs-vs-reactive-variables)。
 

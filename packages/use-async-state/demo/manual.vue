@@ -31,8 +31,8 @@
 <template>
   <el-button :loading="loading" type="primary" @click="run">手动拉取数据（随机失败）</el-button>
   <pre>count:
-    <span v-if="error">{{ error }}</span>
-    <el-icon v-else-if="loading"><icon-loading /></el-icon>
+    <el-icon v-if="loading"><icon-loading /></el-icon>
+    <span v-else-if="error">{{ error }}</span>
     <span v-else-if="data">{{ data.count }}</span>
     <span v-else>empty</span>
 </pre>

@@ -50,18 +50,18 @@
 
       return () => {
         let content: VNodeChild;
-        if (error.value) {
-          content = <span>{error2String(error.value)}</span>;
-        } else if (loading.value) {
+        if (loading.value) {
           content = (
             <ElIcon>
               <icon-loading />
             </ElIcon>
           );
+        } else if (error.value) {
+          content = <span>{error2String(error.value)}</span>;
         } else if (data.value) {
-          content = JSON.stringify(data.value);
+          content = <span>{JSON.stringify(data.value)}</span>;
         } else {
-          content = 'empty';
+          content = <span>empty</span>;
         }
         return (
           <>

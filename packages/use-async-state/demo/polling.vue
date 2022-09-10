@@ -22,9 +22,7 @@
       });
       return () => {
         let content: VNodeChild;
-        if (data.value) {
-          content = <span>{data.value}</span>;
-        } else if (loading.value) {
+        if (loading.value) {
           content = (
             <ElIcon>
               <icon-loading />
@@ -32,6 +30,8 @@
           );
         } else if (error.value) {
           content = <span>{error2String(error.value)}</span>;
+        } else if (data.value) {
+          content = <span>{data.value}</span>;
         } else {
           content = <span>empty</span>;
         }

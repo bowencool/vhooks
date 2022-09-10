@@ -25,8 +25,8 @@
 
 <template>
   <pre>count:
-    <span v-if="error">{{ error }}</span>
-    <el-icon v-else-if="loading"><icon-loading /></el-icon>
+    <el-icon v-if="loading"><icon-loading /></el-icon>
+    <span v-else-if="error">{{ error }}</span>
     <span v-else-if="data">{{ data.count }}</span>
     <span v-else>empty</span>
 </pre>

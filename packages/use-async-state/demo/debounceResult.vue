@@ -30,14 +30,14 @@
 
       return () => {
         let content: VNodeChild;
-        if (error.value) {
-          content = <span>{error2String(error.value)}</span>;
-        } else if (loading.value) {
+        if (loading.value) {
           content = (
             <ElIcon>
               <icon-loading />
             </ElIcon>
           );
+        } else if (error.value) {
+          content = <span>{error2String(error.value)}</span>;
         } else if (data.value) {
           content = (
             <ul>

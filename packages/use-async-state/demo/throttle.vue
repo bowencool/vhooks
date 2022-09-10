@@ -27,17 +27,19 @@
       });
 
       return () => {
-        let content: VNodeChild = 'empty';
+        let content: VNodeChild;
         if (loading.value) {
           content = (
             <ElIcon>
               <icon-loading />
             </ElIcon>
           );
-        } else if (data.value) {
-          content = <span>{JSON.stringify(data.value)}</span>;
         } else if (error.value) {
           content = <span>{error2String(error.value)}</span>;
+        } else if (data.value) {
+          content = <span>{JSON.stringify(data.value)}</span>;
+        } else {
+          content = <span>empty</span>;
         }
         return (
           <>
