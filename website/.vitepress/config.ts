@@ -5,7 +5,7 @@ import markdownItDemo from './markdown/plugin/markdown-it-demo';
 import { nav, sidebar } from './menus';
 
 export const config: UserConfig = {
-  // base: '/vhooks/',
+  base: '/vhooks/',
   lang: 'zh-CN',
   title: process.env.npm_package_name,
   description: process.env.npm_package_description,
