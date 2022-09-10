@@ -1,0 +1,1 @@
+function n(t){return t&&t.constructor===Object}function i(t){if(typeof t=="string")return t;if(t instanceof Error)return`${t.name}: ${t.message}`;if(n(t)){if(typeof t.msg=="string")return t.msg;if(typeof t.message=="string")return t.message}return JSON.stringify(t)}export{i as e};

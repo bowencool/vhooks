@@ -1,0 +1,1 @@
+const r=e=>new Promise((s,c)=>{setTimeout(()=>{try{const o=[],i=(e.pageNumber-1)*e.pageSize+1;for(let t=i;t<i+e.pageSize&&!(t>33);t++)o.push({id:t});s({total:33,list:o})}catch(a){c(a)}},300)});export{r as f};
