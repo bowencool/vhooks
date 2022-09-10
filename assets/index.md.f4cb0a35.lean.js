@@ -1,1 +1,0 @@
-import{_ as e,o as s,c as a,d as n}from"./app.194d166f.js";const b='{"title":"@bowencool/vhooks","description":"","frontmatter":{},"headers":[{"level":2,"title":"usage","slug":"usage"}],"relativePath":"guide/intro.md"}',o={},t=n("",6),r=[t];function c(i,p,l,d,u,h){return s(),a("div",null,r)}var k=e(o,[["render",c]]);export{b as __pageData,k as default};
