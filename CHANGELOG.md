@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/bowencool/vhooks/compare/v0.3.0...v0.3.1) (2022-09-10)
+
+
+### Bug Fixes
+
+* dependencies ([1718d66](https://github.com/bowencool/vhooks/commit/1718d66b42492b42db69f651db3c79c6f6498de9))
+
+
+
 # [0.3.0](https://github.com/bowencool/vhooks/compare/v0.2.0...v0.3.0) (2022-09-10)
 
 
