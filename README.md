@@ -2,7 +2,7 @@
 
 vue hooks.
 
-see [Website](https://github.com/bowencool/vhooks)
+see [Website](https://bowencool.github.io/vhooks/)
 
 ## Usage
 
