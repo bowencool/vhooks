@@ -6,7 +6,7 @@ The logic for Countdown.
 
 ## Demos
 
-<demo src="./demo/demo1.vue"  />
+<demo src="./demo/demo1.vue" title="Basic 基本使用" />
 
 <demo src="./demo/demo2.vue" title="Custom Format 自定义格式" />
 

@@ -13,7 +13,7 @@
       });
       return () => (
         <pre>
-          {formattedText.value} until tomorrow.
+          {formattedText.value} left until tomorrow.
           {JSON.stringify(calculated.value, null, 2)}
         </pre>
       );
