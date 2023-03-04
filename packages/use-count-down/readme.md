@@ -1,14 +1,16 @@
 ## Intro
 
+The logic for Countdown.
+
 倒计时通用逻辑。
 
 ## Demos
 
 <demo src="./demo/demo1.vue"  />
 
-<demo src="./demo/demo2.vue" title="自定义格式" />
+<demo src="./demo/demo2.vue" title="Custom Format 自定义格式" />
 
-<demo src="./demo/demo3.vue" title="手动控制 + 自定义样式" />
+<demo src="./demo/demo3.vue" title="Manual and Custom 手动控制 + 自定义样式" />
 
 ## API
 

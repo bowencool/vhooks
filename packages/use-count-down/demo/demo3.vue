@@ -16,16 +16,15 @@
         <>
           {running.value ? (
             <button key="p" onClick={pause}>
-              暂停
+              Pause
             </button>
           ) : (
             <button key="resume" onClick={resume}>
-              开始
+              Start
             </button>
           )}
-          <button onClick={reset}>重置</button>
-          <pre>{formattedText.value}</pre>
-          <p>自定义样式</p>
+          <button onClick={reset}>Reset</button>
+          {/* <pre>{formattedText.value}</pre> */}
           <div>
             <span class="block">{`${calculated.value.m}`.padStart(2, '0')}</span>
             <span class="colon">:</span>
