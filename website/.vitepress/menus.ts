@@ -38,10 +38,10 @@ const hooks = [
     text: 'Composition API',
     children: [
       { text: 'useAsyncState 异步状态管理', link: '/hooks/use-async-state/readme' },
+      { text: 'useCountDown 倒计时交互', link: '/hooks/use-count-down/readme' },
       { text: 'usePaging 分页器状态管理', link: '/hooks/use-paging/readme' },
       { text: 'useInfiniteScroll 无限滚动状态管理', link: '/hooks/use-infinite-scroll/readme' },
       { text: 'useCopy 复制交互', link: '/hooks/use-copy/readme' },
-      { text: 'useCountDown 倒计时交互', link: '/hooks/use-count-down/readme' },
     ],
   },
 ];
