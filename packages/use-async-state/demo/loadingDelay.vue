@@ -17,10 +17,12 @@
   export default defineComponent({
     setup() {
       const getTimeAction = useAsyncState(queryService, {
-        manual: true,
+        // manual: true,
+        pollingInterval: 1000,
       });
       const withLoadingDelayAction = useAsyncState(queryService, {
-        manual: true,
+        // manual: true,
+        pollingInterval: 1000,
         loadingDelay: 200,
       });
       return () => {
@@ -62,19 +64,13 @@
 
         return (
           <>
-            <p>通过设置 loadingDelay，可以延迟 loading 变成 true 的时间，有效防止闪烁。</p>
-            <el-button
-              type="primary"
-              onClick={() => {
-                getTimeAction.run();
-                withLoadingDelayAction.run();
-              }}
-            >
-              run
-            </el-button>
-            <pre>默认无: {content}</pre>
-            <pre>设置了 loadingDelay: {withLoadingDelayActionContent}</pre>
-            <pre>【推荐】SWR : {contentWithSWR}</pre>
+            <p>
+              You can set <code>loadingDelay</code> to delay the loading came true to prevent flickering. <br />
+              通过设置 loadingDelay，可以延迟 loading 变成 true 的时间，有效防止闪烁。
+            </p>
+            <pre>Default: {content}</pre>
+            <pre>200ms loadingDelay: {withLoadingDelayActionContent}</pre>
+            <pre>SWR : {contentWithSWR}</pre>
           </>
         );
       };

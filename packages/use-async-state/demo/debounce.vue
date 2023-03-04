@@ -50,6 +50,10 @@
         return (
           <>
             <p>
+              You can set the <code>debounceInterval</code> to enable debounce mode. If the <code>run</code> is
+              triggered frequently, requests are made using the debounce policy. Recommended with
+              <code>debounceResult</code>
+              together. <br />
               通过设置 debounceInterval ，则进入防抖模式。此时如果频繁触发 run ，则会以防抖策略进行请求。推荐和
               debounceResult 一同开启。
             </p>
@@ -61,7 +65,7 @@
                 await run(keywords);
               }}
               type="text"
-              placeholder="打字打快点"
+              placeholder="type something quickly"
               style="width: 300px"
             />
             {content}

@@ -37,12 +37,16 @@
         }
         return (
           <>
-            <p>通过 pollingInterval 设置轮询间隔。 通过 pollingWhenHidden 设置页面隐藏时自动暂停，页面重新显示时恢复</p>
+            <p>
+              Set the polling interval via <code>pollingInterval</code>. Set "auto pause when the page is hidden and
+              resume when the page is redisplayed" by pollingWhenHidden. <br />
+              通过 pollingInterval 设置轮询间隔。 通过 pollingWhenHidden 设置页面隐藏时自动暂停，页面重新显示时恢复
+            </p>
             <ElButton type="info" onClick={pause} icon={VideoPause}>
-              暂停
+              Pause
             </ElButton>
             <ElButton type="primary" onClick={resume} icon={VideoPlay}>
-              恢复
+              Resume
             </ElButton>
             <pre>count: {content}</pre>
           </>

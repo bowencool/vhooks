@@ -40,7 +40,7 @@
       }
     "
   >
-    再来一次（随机延迟）
+    One More Time (Random delay)
   </el-button>
   <pre>data:
     <el-icon v-if="loading"><icon-loading /></el-icon>

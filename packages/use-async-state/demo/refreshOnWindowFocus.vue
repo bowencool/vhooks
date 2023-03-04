@@ -37,6 +37,10 @@
         return (
           <>
             <p>
+              If you set <code>refreshOnWindowFocus = true</code>, the request will be refreshed when the browser window
+              refocuses and revisible. You can set the request interval by setting <code>focusTimespan</code>, which
+              defaults to 5000ms.
+              <br />
               如果你设置了 refreshOnWindowFocus = true ，则在浏览器窗口 refocus 和 revisible
               时，会重新发起请求。你可以通过设置 focusTimespan 来设置请求间隔，默认为 5000ms 。
             </p>

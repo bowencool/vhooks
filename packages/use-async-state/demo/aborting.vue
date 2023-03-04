@@ -35,8 +35,8 @@
 </script>
 
 <template>
-  <el-button :loading="loading" type="primary" :icon="VideoPlay" @click="run">开始执行</el-button>
-  <el-button :disabled="!loading" type="danger" plain :icon="VideoPause" @click="cancel">立即停止</el-button>
+  <el-button :loading="loading" type="primary" :icon="VideoPlay" @click="run">Run</el-button>
+  <el-button :disabled="!loading" type="danger" plain :icon="VideoPause" @click="cancel">Cancel immediately</el-button>
   <pre>count:
     <el-icon v-if="loading"><icon-loading /></el-icon>
     <span v-else-if="error">{{ error }}</span>
@@ -45,10 +45,19 @@
 </pre>
   <blockquote>
     <p>
+      Should be run in the environment which support
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/AbortController" target="_blank">AbortController</a>
+      .
+      <br />
       需要运行环境支持
       <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/AbortController" target="_blank">AbortController</a>
       。
     </p>
-    <p>仅拦截任务状态，已经执行的service（如 http 请求）暂不支持撤销。</p>
+    <p>
+      Only the task status is intercepted. Services (such as http requests) that have already been executed cannot be
+      revoked.
+      <br />
+      仅拦截任务状态，已经执行的service（如 http 请求）暂不支持撤销。
+    </p>
   </blockquote>
 </template>

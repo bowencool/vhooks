@@ -29,10 +29,10 @@
           maxCount: 3,
           retryInterval: 1000,
           onRetry(i) {
-            logs.value.push(`${Date.now()} 正在进行第${i}次尝试...`);
+            logs.value.push(`${Date.now()} The attempt ${i} is under way...`);
           },
           onFailed(i, [err]) {
-            logs.value.push(`${Date.now()} 第${i}次失败了：${error2String(err)}`);
+            logs.value.push(`${Date.now()} The attempt ${i} failed：${error2String(err)}`);
           },
         },
         onSuccess(rez, params) {
@@ -73,7 +73,7 @@
                 await run('abc');
               }}
             >
-              查询（结果是随机的，多点几次看效果）
+              Query (Random failure)
             </ElButton>
             <pre>{content}</pre>
             <pre>{logs.value.join('\n')}</pre>

@@ -52,6 +52,16 @@
         return (
           <>
             <p>
+              (When the execution frequency is too high or the execution time is uneven) Only takes the result of the
+              last asynchronous task executed, recommend to enable. See more{' '}
+              <a
+                href="https://bowencool.github.io/async-utilities/functions/debounceAsyncResult/readme.html"
+                target="_blank"
+              >
+                detail
+              </a>
+              .
+              <br />
               （执行频率过高时或执行时间不均匀）取最后一次执行的异步任务结果，推荐开启。
               <a
                 href="https://bowencool.github.io/async-utilities/functions/debounceAsyncResult/readme.html"
@@ -62,13 +72,15 @@
             </p>
             <input
               onInput={async function onInput(e) {
+                // Note that code before 'await run' still executes
                 // 注意在 `await run` 之前的代码仍会执行
                 const keywords = (e.target as HTMLInputElement).value;
+                // It gets stuck here at the right time
                 // 会在适当的时机在此处卡住
                 await run(keywords);
               }}
               type="text"
-              placeholder="打字打快点"
+              placeholder="type something quickly"
               style="width: 300px"
             />
             {content}
