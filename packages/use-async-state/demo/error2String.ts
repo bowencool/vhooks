@@ -13,11 +13,11 @@ export function error2String(err: unknown) {
     return `${err.name}: ${err.message}`;
   }
   if (isPlainObject(err)) {
-    if (typeof err.msg === 'string') {
-      return err.msg;
-    }
-    if (typeof err.message === 'string') {
-      return err.message;
+    const key = ['message', 'msg', 'error', 'err_msg', 'error_message'];
+    for (const k of key) {
+      if (k in err) {
+        return err[k];
+      }
     }
   }
   return JSON.stringify(err);
