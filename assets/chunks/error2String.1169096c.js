@@ -1,0 +1,1 @@
+function e(n){return n&&n.constructor===Object}function r(n){if(typeof n=="string")return n;if(n instanceof Error)return`${n.name}: ${n.message}`;if(e(n)){const s=["message","msg","error","err_msg","error_message"];for(const t of s)if(t in n)return n[t]}return JSON.stringify(n)}export{r as e};
